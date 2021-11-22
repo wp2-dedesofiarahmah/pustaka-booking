@@ -11,15 +11,15 @@ class ModelBuku extends CI_Model
 
     public function bukuWhere($where)
     {
-        return $this->db->get_where('buku', $where);
+        return $this->db->get_where('buku' ,$where);
     }
 
     public function simpanBuku($data = null)
     {
-        $this->db->insert('buku' $data);
+        $this->db->insert('buku' ,$data);
     }
 
-    public function updataBuku($data = null, $where = null)
+    public function updateBuku($data = null, $where = null)
     {
         $this->db->update('buku', $data, $where);
     }
@@ -52,7 +52,7 @@ class ModelBuku extends CI_Model
 
     public function simpanKategori($data = null)
     {
-        $this->db->insert('kategori' $data);
+        $this->db->insert('kategori' ,$data);
     }
 
     public function hapusKategori($where = null)
